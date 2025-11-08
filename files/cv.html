@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Debjeet Baral — Resume</title>
+  <style>
+    :root{
+      --bg:#f7f9fc;--card:#fff;--accent:#0f172a;--muted:#6b7280;--primary:#0078ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--accent);}
+    .container{max-width:1000px;margin:40px auto;background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);display:grid;grid-template-columns:300px 1fr}
+    .sidebar{background:linear-gradient(180deg,#0078ff,#0053b8);color:white;padding:30px;display:flex;flex-direction:column;align-items:center;text-align:center}
+    .sidebar img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #fff;margin-bottom:15px}
+    .sidebar h1{margin:10px 0 4px;font-size:22px}
+    .sidebar h2{margin:0;font-size:14px;font-weight:400;color:#d0e2ff}
+    .info{font-size:14px;line-height:1.8;margin-top:15px}
+    .info strong{color:#fff}
+    .skill-list{margin-top:20px;text-align:left}
+    .skill-list h3{font-size:15px;margin-bottom:8px;color:#cfe7ff}
+    .pill{display:inline-block;background:rgba(255,255,255,0.2);padding:6px 10px;border-radius:999px;margin:4px;font-size:13px}
+
+    .main{padding:30px}
+    h3{margin-bottom:6px;color:var(--primary)}
+    section{margin-bottom:25px}
+    p{margin:6px 0;color:#333;line-height:1.6;font-size:15px}
+    .title{font-weight:600;font-size:18px;margin-bottom:4px}
+    .subtitle{font-size:14px;color:var(--muted);margin-bottom:8px}
+    .btn{background:var(--primary);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;margin-right:8px;font-weight:500}
+    footer{text-align:center;font-size:13px;color:var(--muted);padding:10px 0;margin-top:10px}
+    @media(max-width:768px){.container{grid-template-columns:1fr}.sidebar{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="Gemini_Generated_Image_p1bx8bp1bx8bp1bx.png" alt="Profile Photo" />
+      <h1>Debjeet Baral Bappy</h1>
+      <h2>B.Sc. in CSE — UITS (2nd Semester)</h2>
+      <div class="info">
+        <div><strong>Phone:</strong> 01623520551</div>
+        <div><strong>Email:</strong> <a href="mailto:debjeetbaral@gmail.com" style="color:white;text-decoration:none">debjeetbaral@gmail.com</a></div>
+        <div><strong>Location:</strong> Plot# 125/A, Block# A, Bashundhara R/A, Dhaka</div>
+      </div>
+      <div class="skill-list">
+        <h3>Skills</h3>
+        <span class="pill">C</span>
+        <span class="pill">C++</span>
+        <span class="pill">OOP in Java</span>
+        <span class="pill">HTML</span>
+        <span class="pill">CSS</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">AI/ML (Learning)</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section>
+        <div class="title">Career Objective</div>
+        <p>Motivated and detail-oriented Computer Science student from the University of Information Technology and Sciences (UITS). Passionate about web development, AI/ML, and software design. Seeking opportunities to enhance technical and creative skills in real-world projects.</p>
+      </section>
+
+      <section>
+        <div class="title">Education</div>
+        <div class="subtitle">Bachelor of Science in Computer Science and Engineering (CSE)</div>
+        <p><strong>University:</strong> University of Information Technology and Sciences (UITS)<br>
+        <strong>Semester:</strong> 2nd Semester<br>
+        <strong>Session:</strong> 2024–2028 (Expected)</p>
+      </section>
+
+      <section>
+        <div class="title">Experience</div>
+        <p><strong>Student Developer</strong> — Created several learning projects using C, C++, Java (OOP), and web technologies (HTML, CSS, JavaScript). Practiced coding on problem-solving platforms and participated in small academic projects.</p>
+        <p><strong>Project:</strong> Smart Waste System — OOP-based project that automates waste management using sensor logic and smart categorization.</p>
+      </section>
+
+      <section>
+        <div class="title">Technical Skills</div>
+        <ul>
+          <li>Proficient in front-end development with HTML, CSS, and JavaScript</li>
+          <li>Strong foundation in OOP with Java, and basic C/C++</li>
+          <li>Basic understanding of AI & Machine Learning concepts</li>
+          <li>Good communication and presentation skills (BD calling skill)</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="title">Personal Information</div>
+        <p><strong>Name:</strong> Debjeet Baral Bappy<br>
+        <strong>Address:</strong> Bashundhara R/A, Dhaka<br>
+        <strong>Nationality:</strong> Bangladeshi<br>
+        <strong>Languages:</strong> English, Bengali</p>
+      </section>
+
+      <section>
+        <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+        <button class="btn" id="copyHtml">Copy HTML</button>
+      </section>
+    </main>
+  </div>
+
+  <footer>© 2025 Debjeet Baral Bappy — Designed with HTML, CSS & JavaScript</footer>
+
+  <script>
+    document.getElementById('copyHtml').addEventListener('click', async ()=>{
+      try {
+        const html = document.documentElement.outerHTML;
+        await navigator.clipboard.writeText('<!doctype html>'+html);
+        alert('HTML copied to clipboard!');
+      } catch(e){alert('Failed to copy.');}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* RESET AND BASE STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light background */
+    color: #333;
+    padding: 20px;
+}
+
+/* CV CONTAINER */
+.cv-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* HEADER SECTION */
+.header {
+    background-color: #0077b6; /* Professional blue background */
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+}
+
+.header-info h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.header-info .title {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ade8f4;
+}
+
+/* MAIN BODY - TWO COLUMNS */
+.cv-body {
+    display: flex;
+}
+
+.left-column {
+    flex: 1;
+    background-color: #f8f8f8; /* Lighter sidebar */
+    padding: 30px;
+    border-right: 1px solid #eee;
+}
+
+.right-column {
+    flex: 2;
+    padding: 30px;
+}
+
+/* SECTION STYLES */
+.section-block {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease; /* For JavaScript interaction */
+}
+
+.section-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-block h2 {
+    color: #0077b6;
+    font-size: 1.5em;
+    border-bottom: 2px solid #ade8f4;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.section-block h2 i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+/* SKILLS LIST */
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.skills-list li::before {
+    content: "•";
+    color: #0077b6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* EDUCATION AND PROJECT ITEMS */
+.education-item, .project-item, .experience-item {
+    margin-bottom: 15px;
+}
+
+.education-item h3, .project-item h3, .experience-item h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.education-item p, .project-item p, .experience-item p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* JAVASCRIPT HIGHLIGHT CLASS */
+.highlight {
+    background-color: #e0f7fa; /* Light cyan highlight */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .cv-body {
+        flex-direction: column;
+    }
+
+    .left-column {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .contact-info {
+        text-align: left;
+        width: 100%;
+    }
+}
